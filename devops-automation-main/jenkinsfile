@@ -16,10 +16,10 @@ pipeline {
 
 stage('build docker image') {
             steps {
-                script{
+                
                 docker.build('javatechie/devops-integration')
             }
     }
 }
 }
-}
+
