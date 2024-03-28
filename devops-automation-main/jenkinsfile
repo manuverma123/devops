@@ -17,8 +17,9 @@ pipeline {
 stage('build docker image') {
             steps {
                  script {
-                docker.build('javatechie/devops-integration')
-            }
+              //  docker.build('javatechie/devops-integration')
+                 bat 'wsl /usr/bin/docker build -t javatechie/devops-integration .'
+            } 
     }
 }
 }
