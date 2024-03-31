@@ -19,7 +19,7 @@ stage('build docker image') {
                  script {
               //  docker.build('javatechie/devops-integration')
                 // bat 'wsl /usr/bin/docker build -t javatechie/devops-integration .'
-bat 'C:\\Windows\\System32\\wsl.exe /usr/bin/docker build -t javatechie/devops-integration .'
+bat 'C:\\Windows\\System32\\wsl.exe sudo /usr/bin/docker build -t javatechie/devops-integration .'
             } 
     }
 }
