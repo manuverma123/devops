@@ -14,14 +14,6 @@ pipeline {
             }
          }
 
-stage('Check WSL Access') {
-            steps {
-                script {
-                    bat '"C:\\Program Files\\WSL\\wsl.exe" ls'
-                }
-            }
-        }
-
 stage('build docker image') {
             steps {
                  script {
