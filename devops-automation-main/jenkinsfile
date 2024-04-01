@@ -21,12 +21,16 @@ stage('build docker image') {
                // bat wsl usr/bin/docker build -t "javatechie/devops-integration" .
          // bat 'wsl usr/bin/docker build -t devops-automation-main'
   //bat 'wsl /bin/docker build -t devops-automation-main'
-
+// Convert Windows path to WSL-compatible path
+            def wslPath = bat(script: 'wsl wslpath -u "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Docpipe\\devops-automation-main"', returnStdout: true).trim()
+            
+            // Change directory permissions within WSL
+            bat "wsl chmod -R 777 ${wslPath}"
+            
+            // Build Docker image using the WSL-compatible path
+            bat "wsl docker build -t devops-automation-main ${wslPath}"
        
-            bat 'wsl /usr/bin/docker build -t devops-automation-main /mnt/c/ProgramData/Jenkins/.jenkins/workspace/Docpipe/devops-automation-main/'
- 
-
-
+            
             } 
     }
 }
