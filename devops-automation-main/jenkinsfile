@@ -23,7 +23,7 @@ stage('build docker image') {
   //bat 'wsl /bin/docker build -t devops-automation-main'
 
        
-            bat 'wsl docker build -t devops-automation-main /mnt/c/ProgramData/Jenkins/.jenkins/workspace/Docpipe/devops-automation-main'
+            bat 'wsl /usr/bin/docker build -t devops-automation-main /mnt/c/ProgramData/Jenkins/.jenkins/workspace/Docpipe/devops-automation-main'
  
 
 
