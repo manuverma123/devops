@@ -19,7 +19,7 @@ stage('build docker image') {
                  script {
               //  docker.build('javatechie/devops-integration')
                // bat wsl usr/bin/docker build -t "javatechie/devops-integration" .
-          bat 'wsl /bin/docker build -t javatechie/devops-integration devops-automation-main/'
+          bat 'wsl /usr/bin/docker build -t javatechie/devops-integration devops-automation-main/'
   //bat 'wsl /bin/docker build -t devops-automation-main'
 
             } 
