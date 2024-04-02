@@ -8,11 +8,11 @@ pipeline {
             }
         }
         
-         stage('build') {
-            steps {
-                bat '"wsl" "/usr/bin/mvn" -f "devops-automation-main/pom.xml" clean install'
-            }
-         }
+         //stage('build') {
+           // steps {
+           //     bat '"wsl" "/usr/bin/mvn" -f "devops-automation-main/pom.xml" clean install'
+         //   }
+       //  }
 
 stage('build docker image') {
             steps {
