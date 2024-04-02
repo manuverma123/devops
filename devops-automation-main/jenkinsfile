@@ -10,7 +10,7 @@ pipeline {
         
          stage('build') {
             steps {
-               bat '"C:\\Program Files\\apache-maven-3.9.1\\bin\\mvn.cmd" -f "devops-automation-main\\pom.xml" clean install'
+               bat '"usr\\bin\\mvn" -f "devops-automation-main\\pom.xml" clean install'
             }
          }
 
