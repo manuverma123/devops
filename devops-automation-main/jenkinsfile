@@ -25,7 +25,7 @@ stage('build docker image') {
                  script {
               //  docker.build('javatechie/devops-integration')
                // bat wsl usr/bin/docker build -t "javatechie/devops-integration" .
-          bat 'wsl usr/bin/docker build -t devops-automation-main'
+          sh 'docker build -t devops-automation-main'
   //bat 'wsl /bin/docker build -t devops-automation-main'
 // bat "wsl docker build -t devops-automation-main '/mnt/c/ProgramData/Jenkins/.jenkins/workspace/Docpipe/devops-automation-main/'"
        
