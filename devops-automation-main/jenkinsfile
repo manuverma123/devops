@@ -10,7 +10,7 @@ pipeline {
         
          stage('build') {
             steps {
-               bat '"usr\\bin\\mvn" -f "devops-automation-main\\pom.xml" clean install'
+                bat '"wsl" "/usr/bin/mvn" -f "devops-automation-main/pom.xml" clean install'
             }
          }
 
