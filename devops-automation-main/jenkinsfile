@@ -11,8 +11,8 @@ pipeline {
         
          stage('build') {
             steps {
- dir('var/lib/jenkins/workspace/DockerPipeline/devops-automation-main/pom.xml') {
-            sh 'clean install'
+ dir('var/lib/jenkins/workspace/DockerPipeline/devops-automation-main') {
+            sh 'mvn clean install'
 
               // sh '"wsl" "/usr/bin/mvn" -f "devops-automation-main/pom.xml" clean install'
 //sh 'mvn clean install'
