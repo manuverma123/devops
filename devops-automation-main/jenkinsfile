@@ -13,10 +13,6 @@ pipeline {
             steps {
  dir('devops-automation-main') {
             sh 'mvn clean install'
-
-              // sh '"wsl" "/usr/bin/mvn" -f "devops-automation-main/pom.xml" clean install'
-//sh 'mvn clean install'
-//sh '"wsl" "/var/lib/jenkins/workspace/DockerPipeline" -f "devops-automation-main/pom.xml" clean install'
            }
         }
 }
@@ -25,7 +21,7 @@ stage('build docker image') {
                  script {
               //  docker.build('javatechie/devops-integration')
                // bat wsl usr/bin/docker build -t "javatechie/devops-integration" .
-          sh 'docker build -t devops-automation-main'
+          sh 'docker build -t javatechie/devops-integration devops-automation-main/'
   //bat 'wsl /bin/docker build -t devops-automation-main'
 // bat "wsl docker build -t devops-automation-main '/mnt/c/ProgramData/Jenkins/.jenkins/workspace/Docpipe/devops-automation-main/'"
        
