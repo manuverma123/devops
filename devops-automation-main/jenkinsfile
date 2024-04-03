@@ -1,11 +1,5 @@
 pipeline {
     agent any
-
-
- tools {
-        // Configure SonarScanner as a tool with the installation name "sonarscanner"
-       maven 'sonarscanner'
-    }
  
     stages {
         stage('checkout') {
