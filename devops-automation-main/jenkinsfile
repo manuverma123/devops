@@ -19,7 +19,7 @@ pipeline {
  stage('SonarQube Analysis') {
             steps {
  script {
-                sh 'sonar-scanner -Dsonar.login=myprojecttoken'
+                sh 'sonarscanner -Dsonar.login=myprojecttoken'
                     }
                 }
             }
