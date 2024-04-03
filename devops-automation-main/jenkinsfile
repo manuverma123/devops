@@ -3,7 +3,7 @@ pipeline {
        
   tools {
         // Make sure to use the exact tool name configured in Jenkins
-        SonarQube Scanner 'sonarscanner'
+        SonarQubeScanner 'sonarscanner'
     }
     stages {
         stage('checkout') {
