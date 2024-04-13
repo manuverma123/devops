@@ -30,7 +30,7 @@ stage('build docker image') {
  stage('deploy') {
                 steps {
                      script {
-                        sh 'docker run -d --name javaproject -p 8080:8081 javatechie/devops-integration'
+                        sh 'docker run -d --name javaproject -p 8081:8081 javatechie/devops-integration'
                     } 
                 }
         }
