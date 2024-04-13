@@ -16,14 +16,6 @@ pipeline {
         }
 }
 
- stage('SonarQube Analysis') {
-            steps {
- script {
-                sh 'sonarscanner -Dsonar.login=myprojecttoken'
-                    }
-                }
-            }
-        
 
 
 stage('build docker image') {
